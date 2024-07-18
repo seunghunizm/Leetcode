@@ -12,10 +12,10 @@ class Solution {
         int ans = 0;
 
         for (int i = 0; i < s.length(); i++){ // for loop for the length of string S
-            if (i < s.length() - 1 && m.get(s.charAt(i)) < m.get(s.charAt(i + 1))) {
-                ans -= m.get(s.charAt(i));
+            if (i < s.length() - 1 && m.get(s.charAt(i)) < m.get(s.charAt(i + 1))) { // compare if I is smaller than the next roman 
+                ans -= m.get(s.charAt(i)); // if smaller subtract
             } else {
-                ans += m.get(s.charAt(i));
+                ans += m.get(s.charAt(i)); // if larger or equal add it
             }
         }
         return ans;
